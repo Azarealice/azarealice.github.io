@@ -1,7 +1,9 @@
 ---
-categories: 技术 - 算法
-tags: 技术
+categories: 
+- 算法 
+- Codeforces
 date: 2021/4/29 18:30:00
+title: Codeforces - 1349A 1495B
 ---
 #### 1349A - Orac and LCM - [rating 1600]
 
@@ -36,8 +38,6 @@ Print one integer: gcd({lcm({𝑎𝑖,𝑎𝑗}) | 𝑖<𝑗}).
 对每个质数p，找出每个整数对应的最大k值，因为最多可以有一个整数不包含p^k，在所有值中第二小的k则为ans中可以包含的最大k值。
 
 https://codeforces.com/contest/1349/submission/121674760
-
-#### 
 
 #### 1495B - Let's Go Hiking - [rating 1900]
 
