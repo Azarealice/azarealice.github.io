@@ -8,6 +8,7 @@ categories: 前端
 - HTML
 - JavaScript
 - CSS
+- SVG XML
 - TypeScript
 - node & npm
 - Server Side Rendering
