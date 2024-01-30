@@ -24,6 +24,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-ayer": "^1.9.7-0",
     "hexo-theme-butterfly": "^4.12.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "hexo-wordcount": "^6.0.1"
   }
 }
