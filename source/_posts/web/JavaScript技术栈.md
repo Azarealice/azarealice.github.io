@@ -24,8 +24,6 @@ categories: 前端
 - Koa
 - Egg
 
-####
-
 #### Vue生态
 - **Nuxt** for full-stack
 - **Vuetify** for components
