@@ -13,6 +13,7 @@ categories: 前端
 - node & npm
 - Server Side Rendering
 - webpack
+- ES6
 
 #### 前端框架
 - Vue
