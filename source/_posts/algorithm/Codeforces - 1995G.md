@@ -44,8 +44,8 @@ For each test case, output a single number — MEOW(𝑎). Since it may be very 
 
 记 $S$ 的长度为 $n$ ， $s$ 的长度为 $l$ ，前 $l+1$  个不属于集合 $s$ 的升序正整数列为 $t$ ， $m = MEX(s,\vert s\vert+1) = MEX(s,l+1) = \max(x)_{x\in t}$ ，以下分情况讨论：
 
-1. 对于 $2*l+1 \le n$ 的子序列，其 $m$ 值不固定，对于给定的 $l$ 中每个可能的值 $m\in [l+1,2*l+1]$  ，$m$ 即为 $t$ 序列的**最大值**， $m$ 左侧有 $m-1$ 个空位，在其中放入**长度为 $l$ 的 $t$ 剩余序列**和**长度为 $m-1-l$ 的 $s$ 序列**，排列个数为 $l \choose m-1$ ，$m$ 右侧有 $n-m$ 个空位，在其中放入**长度为 $l-(m-1-l)$ 的 $s$ 剩余序列**，排列个数为 $l - (m - 1 - l) \choose n - m$，故每个 $m$ 值的排列个数为 ${l \choose m-1} * {l - (m - 1 - l) \choose n - m }$，这部分的 $m$ 总和为 $\sum_{l=0}^{2*l+1\le n} \sum_{m=l+1}^{m\le 2*l+1} m * {l \choose m-1} * {l - (m - 1 - l) \choose n - m }$
-2. 对于 $2*l+1 \gt n$ 的子序列，序列 $s$ 和序列 $t$ 的总长度超过 $n$ ， 则其 $m$ 值固定为 $2*l+1$ ，长度为 $l$ 的子序列的个数为 ${l \choose n}$ ，这部分的 $m$ 总和为 $\sum_{2*l+1\gt n}^{l\le n} (2*l+1) * {l \choose n}$
+1. 对于长度满足 $2*l+1 \le n$ 的子序列，其 $m$ 值不固定，对于给定的 $l$ 中每个可能的值 $m\in [l+1,2*l+1]$  ，$m$ 即为 $t$ 序列的**最大值**， $m$ 左侧有 $m-1$ 个空位，在其中放入**长度为 $l$ 的 $t$ 剩余序列**和**长度为 $m-1-l$ 的 $s$ 序列**，排列个数为 $l \choose m-1$ ，$m$ 右侧有 $n-m$ 个空位，在其中放入**长度为 $l-(m-1-l)$ 的 $s$ 剩余序列**，排列个数为 $l - (m - 1 - l) \choose n - m$，故每个 $m$ 值的排列个数为 ${l \choose m-1} * {l - (m - 1 - l) \choose n - m }$，这部分的 $m$ 总和为 $\sum_{l=0}^{2*l+1\le n} \sum_{m=l+1}^{m\le 2*l+1} m * {l \choose m-1} * {l - (m - 1 - l) \choose n - m }$
+2. 对于长度满足 $2*l+1 \gt n$ 的子序列，序列 $s$ 和序列 $t$ 的总长度超过 $n$ ， 则其 $m$ 值固定为 $2*l+1$ ，长度为 $l$ 的子序列的个数为 ${l \choose n}$ ，这部分的 $m$ 总和为 $\sum_{2*l+1\gt n}^{l\le n} (2*l+1) * {l \choose n}$
 
 故 $\sum_{\substack{s\in S}} MEX(s,\vert s\vert+1) = \sum_{l=0}^{2*l+1\le n} \sum_{m=l+1}^{m\le 2*l+1} m * {l \choose m-1} * {l - (m - 1 - l) \choose n - m } + \sum_{2*l+1\gt n}^{l\le n} (2*l+1) * {l \choose n}$​
 
